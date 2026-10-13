@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xebia | Power BI Proposal Studio</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="mark">X</span><span>XEBIA <small>DATA & ANALYTICS</small></span></div><div class="topmeta">PROPOSAL STUDIO <span class="dot"></span> GROQ AI</div></header>
+<main class="shell">
+<section class="intro">
+  <p class="eyebrow">FROM DISCOVERY TO DECISION</p>
+  <h1>Build a proposal<br><em>worth presenting.</em></h1>
+  <p class="intro-copy">Turn discovery notes or a client BRD into a detailed Power BI consulting proposal. The deck is built around a clear storyline, specific design decisions and implementation detail—not a wall of generic boxes.</p>
+  <div class="principles"><span>01 &nbsp; Business narrative</span><span>02 &nbsp; Technical depth</span><span>03 &nbsp; Editable PowerPoint</span></div>
+</section>
+<section class="form-panel">
+  <div class="form-heading"><div><p class="eyebrow">NEW PROPOSAL</p><h2>Client context</h2></div><div class="step">01 <span>/</span> 03</div></div>
+  <form id="proposal-form">
+    <div class="fields two">
+      <label>Client / organisation <span class="optional">(optional)</span><input name="client_name" placeholder="e.g. Northstar Components Group"></label>
+      <label>Industry <span class="optional">(optional)</span><input name="industry" placeholder="e.g. Manufacturing, Healthcare, BFSI"></label>
+    </div>
+    <label>Proposal tone <span class="optional">(optional)</span><select name="tone"><option>Executive consulting</option><option>Technical architecture proposal</option><option>Business transformation proposal</option></select></label>
+    <div class="input-choice"><span class="choice-label">CHOOSE ONE INPUT METHOD</span><span class="choice-rule"></span></div><label>Option A — Write requirements in plain text<textarea id="requirements_text" name="requirements_text" rows="9" placeholder="Write or paste the client business requirements here. Leave this empty if you are uploading a BRD."></textarea><span class="hint">Use this field OR upload a BRD below. Do not fill both. The other fields on this form are optional.</span></label>
+    <div class="upload-zone"><label for="file">Option B — Upload a BRD <span>(DOCX, PDF, TXT)</span></label><input id="file" name="file" type="file" accept=".docx,.pdf,.txt"><p class="hint">If a file is selected, the plain-text field must be empty.</p></div>
+    <div class="submit-row"><div class="provider"><span class="provider-dot"></span><span>Groq API <small>configured in backend .env</small></span></div><button id="submit" type="submit">Generate proposal <span>↗</span></button></div>
+  </form>
+  <div id="status" class="status" aria-live="polite"></div>
+</section>
+<section class="bottom-note"><strong>What the deck contains</strong><p>Cover and storyline · seven fixed Xebia capability slides · client-specific business case, architecture, data model, KPI catalogue, report design, governance, roadmap, risks, acceptance criteria and next steps.</p></section>
+</main>
+<footer><span>XEBIA / DATA & ANALYTICS</span><span>POWER BI PROPOSAL STUDIO</span></footer>
+<script src="/static/app.js"></script>
+</body></html>
